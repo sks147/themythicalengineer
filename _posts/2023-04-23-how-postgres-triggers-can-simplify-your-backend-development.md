@@ -4,7 +4,7 @@ title: "How Postgres Triggers Can Simplify Your Backend Development"
 date: 2023-04-23 17:59 +0530
 categories: development
 author: themythicalengineer
-tags: development postgres database trigger optimization backend scale backend
+tags: development postgres database trigger optimization backend scale
 comments: false
 blogid: cf6b6ea1-4d9d-4a07-8f26-1c5b0a089e29
 ---
@@ -29,6 +29,7 @@ By using triggers, you can offload some of the work that would normally be done 
 You should consider the fact that complexity will still be there, but it will be abstracted away inside the database.
 
 ---
+<br/>
 
 ## Let's take an example to see the utility of triggers.
 
@@ -39,8 +40,6 @@ CREATE TABLE wallet (id BIGINT PRIMARY KEY, amount INTEGER NOT NULL DEFAULT 0)
 
 CREATE TABLE passbook (id BIGINT references wallet(id), txn_id BIGSERIAL PRIMARY KEY, amount INTEGER NOT NULL DEFAULT 0, current_amount INTEGER NOT NULL DEFAULT 0)
 ```
-
----
 
 #### Table `wallet` schema
 
@@ -66,6 +65,8 @@ CREATE TABLE passbook (id BIGINT references wallet(id), txn_id BIGSERIAL PRIMARY
 * After that operation `current_amount` in the passbook record should be equal to updated `wallet` table `amount` value.
 
 ---
+
+<br/>
 
 ## Triggers Implementation
 
@@ -99,6 +100,8 @@ EXECUTE FUNCTION update_wallet();
 ```
 
 ---
+
+<br/>
 
 ## Application Code:
 I'll demonstrate the code using [postgres](https://www.npmjs.com/package/postgres) npm package
@@ -164,6 +167,8 @@ UPDATE wallet SET amount = amount + NEW.amount WHERE id = NEW.id;
 This query is equivalent to calling `updateWallet(updatedWallet, sql)` method
 
 ---
+<br/>
+
 
 These are few improvements we can have using triggers:
 ---
