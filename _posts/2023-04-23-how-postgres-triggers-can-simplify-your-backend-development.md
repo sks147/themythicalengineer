@@ -110,24 +110,24 @@ I'll demonstrate the code using [postgres](https://www.npmjs.com/package/postgre
 
 ```javascript
 const addMoney = async (transaction, db = sql) => {
-	const txn = {
-		amount: Math.floor(transaction.amount),
-		id: Math.floor(transaction.id),
-	};
-	await db.begin(async (sql) => {
-		const wallet = await getWallet(id, sql); // SQL query (1)
-		const current_amount = wallet.amount + txn.amount;
-		const updatedWallet = {
-			id: Math.floor(id),
-			amount: current_amount,
-		};
-		const passbookRecord = {
-			...txn,
-			current_amount: current_amount,
-		};
-		await updateWallet(updatedWallet, sql); // SQL query (2)
-		await insertIntoPassbook(passbookRecord, sql); // SQL query (3)
-	});
+  const txn = {
+    amount: Math.floor(transaction.amount),
+    id: Math.floor(transaction.id),
+  };
+  await db.begin(async (sql) => {
+    const wallet = await getWallet(id, sql); // SQL query (1)
+    const current_amount = wallet.amount + txn.amount;
+    const updatedWallet = {
+      id: Math.floor(id),
+      amount: current_amount,
+    };
+    const passbookRecord = {
+      ...txn,
+      current_amount: current_amount,
+    };
+    await updateWallet(updatedWallet, sql); // SQL query (2)
+    await insertIntoPassbook(passbookRecord, sql); // SQL query (3)
+  });
 };
 
 // db.begin starts a database transaction
@@ -141,12 +141,12 @@ const addMoney = async (transaction, db = sql) => {
 
 ```javascript
 const addMoney = async (transaction, db = sql) => {
-	const txn = {
-		amount: Math.floor(txn.amount),
-		id: Math.floor(txn.id),
-	};
-    //  Wallet updates handled by postgres trigger automatically
-	await insertIntoPassbook(txn, db); // SQL query (1)
+  const txn = {
+    amount: Math.floor(transaction.amount),
+    id: Math.floor(transaction.id),
+  };
+  //  Wallet updates handled by postgres trigger automatically
+  await insertIntoPassbook(txn, db); // SQL query (1)
 };
 ```
 
