@@ -183,3 +183,26 @@ These are few improvements we can have using triggers:
 Triggers should be used with caution since they can obscure critical logic and create an illusion of automatic processes. While this can be advantageous in certain scenarios, it can also pose a challenge in terms of debugging, testing, and monitoring since they are not readily visible to developers.
 
 As a result, it is important to weigh the benefits and drawbacks of using triggers before implementing them in a database system.
+
+---
+<br/>
+
+### Update:
+
+Many individuals have left comments on the HN thread, sharing their personal experiences with triggers.
+
+HN Thread: [https://news.ycombinator.com/item?id=35676572](https://news.ycombinator.com/item?id=35676572)
+
+I'll summarise few of the the discussions:
+
+* Dividing business rules into two different places may not be an good approach.
+* Not having version control (migrations) can cause issues in tracking changes.
+* Deployment issues. If you need to rollout a feature in which your logic has changed. Doing that from inside the database will be very difficult in a rolling fashion.
+* Developers may struggle with understanding PL/pgSQL.
+* Adding state to the database can create a vendor lock-in. Will be difficult to migrate to a different database.
+* If your business rules and logic frequently change, database triggers may not be the best solution for you.
+* Maintaining this solution requires SQL administration expertise within your team.
+
+I recommend thoroughly reviewing the discussions before deciding to implement triggers in production. While it works well for us, it may not be suitable for everyone. Therefore, I suggest using it sparingly.
+
+Please share your thoughts and experiences on the HN thread.
