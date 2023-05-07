@@ -38,28 +38,28 @@ Let's say you want to get the record deleted after 1 day of its creation.
 #create a new record
 > db.notifications.insert({"createdAt": new Date(), "text": "Test Notification", "user_id": 1234})
 {
-	"_id" : ObjectId("5f5ce5f166fc42c137815c9b"),
-	"createdAt" : ISODate("2020-09-12T15:14:57.806Z"),
-	"text" : "Test Notification",
-	"user_id" : 1234
+  "_id": ObjectId("5f5ce5f166fc42c137815c9b"),
+  "createdAt": ISODate("2020-09-12T15:14:57.806Z"),
+  "text": "Test Notification",
+  "user_id": 1234
 }
 ```
 To achieve this using TTL indexes you can do this:
 ```bash
 > db.notifications.createIndex({"createdAt":1}, {expireAfterSeconds:86400})
 {
-	"createdCollectionAutomatically" : false,
-	"numIndexesBefore" : 1,
-	"numIndexesAfter" : 2,
-	"ok" : 1,
-	"$clusterTime" : {
-		"clusterTime" : Timestamp(1599923870, 2),
-		"signature" : {
-			"hash" : BinData(0,"A5uE8V6MQf04wNlrmIxaWuRVnQo="),
-			"keyId" : NumberLong("6848960729458933762")
-		}
-	},
-	"operationTime" : Timestamp(1599923870, 2)
+  "createdCollectionAutomatically": false,
+  "numIndexesBefore": 1,
+  "numIndexesAfter": 2,
+  "ok": 1,
+  "$clusterTime": {
+    "clusterTime": Timestamp(1599923870, 2),
+    "signature": {
+      "hash": BinData(0, "A5uE8V6MQf04wNlrmIxaWuRVnQo="),
+      "keyId": NumberLong("6848960729458933762")
+    }
+  },
+  "operationTime": Timestamp(1599923870, 2)
 }
 ```
 
@@ -67,23 +67,23 @@ You can verify if the index is created properly by running `getIndexes` command
 ```bash
 > db.notifications.getIndexes()
 [
-	{
-		"v" : 2,
-		"key" : {
-			"_id" : 1
-		},
-		"name" : "_id_",
-		"ns" : "themythicalengineer.notifications"
-	},
-	{
-		"v" : 2,
-		"key" : {
-			"createdAt" : 1
-		},
-		"name" : "createdAt_1",
-		"ns" : "themythicalengineer.notifications",
-		"expireAfterSeconds" : 86400
-	}
+  {
+    "v": 2,
+    "key": {
+      "_id": 1
+    },
+    "name": "_id_",
+    "ns": "themythicalengineer.notifications"
+  },
+  {
+    "v": 2,
+    "key": {
+      "createdAt": 1
+    },
+    "name": "createdAt_1",
+    "ns": "themythicalengineer.notifications",
+    "expireAfterSeconds": 86400
+  }
 ]
 ```
 
@@ -99,18 +99,18 @@ Let's take a look at important points that should be taken care of, for successf
     ```bash
     > db.notifications.createIndex({"createdAt":1,"text":1}, {expireAfterSeconds:86400})
     {
-        "operationTime" : Timestamp(1599925286, 1),
-        "ok" : 0,
-        "errmsg" : "TTL indexes are single-field indexes, compound indexes do not support TTL. Index spec: { key: { createdAt: 1.0, text: 1.0 }, name: \"createdAt_1_text_1\", expireAfterSeconds: 86400.0 }",
-        "code" : 67,
-        "codeName" : "CannotCreateIndex",
-        "$clusterTime" : {
-            "clusterTime" : Timestamp(1599925286, 1),
-            "signature" : {
-                "hash" : BinData(0,"mCmm0gKiYCSNIpYEggT3LloGKdw="),
-                "keyId" : NumberLong("6848960729458933762")
-            }
-        }
+      "operationTime": Timestamp(1599925286, 1),
+      "ok": 0,
+      "errmsg": "TTL indexes are single-field indexes, compound indexes do not support TTL. Index spec: { key: { createdAt: 1.0, text: 1.0 }, name: \"createdAt_1_text_1\", expireAfterSeconds: 86400.0 }",
+      "code": 67,
+      "codeName": "CannotCreateIndex",
+      "$clusterTime": {
+          "clusterTime": Timestamp(1599925286, 1),
+          "signature": {
+          "hash": BinData(0, "mCmm0gKiYCSNIpYEggT3LloGKdw="),
+          "keyId": NumberLong("6848960729458933762")
+          }
+      }
     }
     ```
 
@@ -121,18 +121,18 @@ You will be able to create a ttl index on field which doesn't have a ISODate for
     # creating index on _id field
     > db.notifications.createIndex({"_id":1,}, {expireAfterSeconds:86400})
     {
-        "operationTime" : Timestamp(1599925396, 1),
-        "ok" : 0,
-        "errmsg" : "The field 'expireAfterSeconds' is not valid for an _id index specification. Specification: { ns: \"5f1118e130ef1b0c1b6271f2_themythicalengineer.notifications\", v: 2, key: { _id: 1.0 }, name: \"_id_1\", expireAfterSeconds: 86400.0 }",
-        "code" : 197,
-        "codeName" : "InvalidIndexSpecificationOption",
-        "$clusterTime" : {
-            "clusterTime" : Timestamp(1599925396, 1),
-            "signature" : {
-                "hash" : BinData(0,"bBhDRiEDafDblhodBTb8NZXVRs0="),
-                "keyId" : NumberLong("6848960729458933762")
-            }
+      "operationTime": Timestamp(1599925396, 1),
+      "ok": 0,
+      "errmsg": "The field 'expireAfterSeconds' is not valid for an _id index specification. Specification: { ns: \"5f1118e130ef1b0c1b6271f2_themythicalengineer.notifications\", v: 2, key: { _id: 1.0 }, name: \"_id_1\", expireAfterSeconds: 86400.0 }",
+      "code": 197,
+      "codeName": "InvalidIndexSpecificationOption",
+      "$clusterTime": {
+        "clusterTime": Timestamp(1599925396, 1),
+        "signature": {
+          "hash": BinData(0, "bBhDRiEDafDblhodBTb8NZXVRs0="),
+          "keyId": NumberLong("6848960729458933762")
         }
+      }
     }
     ```
 
@@ -140,18 +140,18 @@ You will be able to create a ttl index on field which doesn't have a ISODate for
     # able to create index but it won't expire, as text field does not hold a value of ISODate format
     > db.notifications.createIndex({"text":1,}, {expireAfterSeconds:86400})
     {
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1,
-        "$clusterTime" : {
-            "clusterTime" : Timestamp(1599925696, 2),
-            "signature" : {
-                "hash" : BinData(0,"yOPV7m5w8mRKQvAIMcJJ36HYvOw="),
-                "keyId" : NumberLong("6848960729458933762")
-            }
-        },
-        "operationTime" : Timestamp(1599925696, 2)
+      "createdCollectionAutomatically": false,
+      "numIndexesBefore": 1,
+      "numIndexesAfter": 2,
+      "ok": 1,
+      "$clusterTime": {
+        "clusterTime": Timestamp(1599925696, 2),
+        "signature": {
+          "hash": BinData(0, "yOPV7m5w8mRKQvAIMcJJ36HYvOw="),
+          "keyId": NumberLong("6848960729458933762")
+        }
+      },
+      "operationTime": Timestamp(1599925696, 2)
     }
     ```
 
@@ -164,17 +164,17 @@ You will be able to create a ttl index on field which doesn't have a ISODate for
     ```bash
     > db.runCommand({collMod:'notifications', index:{name:'createdAt_1',expireAfterSeconds:60}})
     {
-        "expireAfterSeconds_old" : 86400,
-        "expireAfterSeconds_new" : 60,
-        "ok" : 1,
-        "$clusterTime" : {
-            "clusterTime" : Timestamp(1599927916, 1),
-            "signature" : {
-                "hash" : BinData(0,"+XZKfn8QVM2wZxHIhLlfXSf+nik="),
-                "keyId" : NumberLong("6848960729458933762")
-            }
-        },
-        "operationTime" : Timestamp(1599927916, 1)
+      "expireAfterSeconds_old": 86400,
+      "expireAfterSeconds_new": 60,
+      "ok": 1,
+      "$clusterTime": {
+        "clusterTime": Timestamp(1599927916, 1),
+        "signature": {
+          "hash": BinData(0, "+XZKfn8QVM2wZxHIhLlfXSf+nik="),
+          "keyId": NumberLong("6848960729458933762")
+        }
+      },
+      "operationTime": Timestamp(1599927916, 1)
     }
     ```
 
@@ -214,5 +214,3 @@ db.collection('notifications').createIndex({"expireAt": 1}, {epireAfterSeconds: 
 As you can see that `expireAfterSeconds` is set to `0` here, which means record will expire at the value set to `expireAt` field by the application. 
 
 You can use modify your logic anytime to set the value of `expireAt` field without any downtime.
-
-Please feel free to ask any question in the comment section below.
