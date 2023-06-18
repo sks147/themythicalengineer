@@ -25,7 +25,7 @@ date: ${post_date}
 categories: development
 author: themythicalengineer
 tags: development
-comments: true
+comments: false
 blogUid: $blogUid
 ---
 
