@@ -9,7 +9,7 @@ comments: false
 blogUid: b7d7918f-cadb-4541-95d0-ba4b9d84ddce
 ---
 
-### The Big Problem
+## The Big Problem
 Imagine you have two GitHub accounts: one for personal use and one for work. You might be working on personal projects from your work laptop, but switching between these projects often requires manually updating your GitHub configuration:
 
 ```bash
@@ -19,7 +19,7 @@ git config user.email <your-email>
 
 Forgetting to switch these settings can lead to issues, such as accidentally committing company code with your personal GitHub account or exposing your company email in open-source projects. This can create confusion and potential privacy concerns.
 
-### How to manage multiple github accounts in your laptop
+## How to manage multiple github accounts in your laptop
 
 Add this to `~/.ssh/config`
 
@@ -62,7 +62,7 @@ themythicalengineer@fedora:~/.ssh$ tree
 ├── id_ed25519_personal.pub
 ```
 
-### How to clone repositories for different github accounts using ssh
+## How to clone repositories for different github accounts using ssh
 
 > To fetch company account repositories
 
@@ -78,7 +78,7 @@ git clone git@github.com-personal:<username>/<repo-name>.git
 
 Now that we've set up both GitHub accounts, the next step is to seamlessly switch between them.
 
-### Create Separate directories
+## Create Separate directories
 
 The first step is to keep your company and personal projects in separate directories.
 
@@ -89,10 +89,10 @@ themythicalengineer@fedora:~/$ tree
 ├── company
 ```
 
-### Install direnv
+## Install direnv
 Please check [Official instructions](https://direnv.net/docs/installation.html)
 
-### Create direnv configurations in personal and company directories
+## Create direnv configurations in personal and company directories
 
 ```bash
 cd personal
