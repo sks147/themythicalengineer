@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From Chaos to Control: Using Direnv to Manage Multiple GitHub Accounts
+title: "From Chaos to Control: Using Direnv to Manage Multiple GitHub Accounts"
 date: 2024-08-17 12:22 +0530
 categories: development
 author: themythicalengineer
