@@ -205,6 +205,9 @@ sudo systemctl status redis.service
 
 Once all nodes are running, we can create the cluster. Replace the IP addresses with your actual node IPs:
 
+This command has to be run ONLY ONCE on one of the nodes.
+Replace the IP addresses with your actual node IPs.
+
 ```bash
 redis-cli --cluster create \
   192.168.1.10:7000 192.168.1.11:7000 192.168.1.12:7000 \
