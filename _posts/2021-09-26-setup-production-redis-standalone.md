@@ -5,7 +5,7 @@ date: 2021-09-26 16:12 +0530
 categories: devops
 author: themythicalengineer
 tags: aws redis database cache
-comments: true
+comments: false
 blogUid: "8c76debc-9fd2-46b7-9868-db16c9b7afbe"
 ---
 ![redis-standalone-banner](/assets/images/setup-production-redis-standalone/production-ready-redis-standalone.webp)
