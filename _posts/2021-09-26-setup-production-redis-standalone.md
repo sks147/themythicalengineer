@@ -148,13 +148,15 @@ The command below will create a service configuration at `/etc/systemd/system/re
 
 sudo tee -a /etc/systemd/system/redis.service << END
 [Unit]
+StartLimitIntervalSec=300
+StartLimitBurst=2
 Description=Redis
 After=syslog.target
 
 [Service]
 ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf
 RestartSec=5s
-Restart=on-success
+Restart=always
 LimitNOFILE=65536
 
 [Install]
