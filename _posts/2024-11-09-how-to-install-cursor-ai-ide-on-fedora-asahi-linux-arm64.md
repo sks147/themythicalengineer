@@ -4,7 +4,7 @@ title: "How to install Cursor AI IDE on Fedora Asahi Linux Arm64"
 date: 2024-11-09 14:15 +0530
 categories: development
 author: themythicalengineer
-tags: development
+tags: linux macos ai arm64 development
 comments: false
 blogUid: ed7db928-7522-4a83-8ab9-9ad513c723d2
 ---
