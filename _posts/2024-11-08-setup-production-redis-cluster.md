@@ -16,7 +16,8 @@ This guide assumes you have basic knowledge of Linux systems and Redis concepts.
 
 ## Prerequisites: Kernel Parameter Tuning
 
-Just like in our standalone setup, we need to tune kernel parameters for optimal performance. These settings should be applied to all nodes in the cluster.
+Just like in our standalone setup, we need to tune kernel parameters for optimal performance.
+These settings should be applied to all nodes in the cluster.
 
 ```bash
 # Increase limits /etc/security/limits.conf 
@@ -42,7 +43,6 @@ sudo sysctl -w net.ipv4.tcp_max_syn_backlog=65536    # backlog setting
 sudo sysctl -w net.core.somaxconn=65536              # up the number of connections per port
 sudo sysctl -w net.core.rmem_max=212992              # up the receive buffer size
 sudo sysctl -w net.core.wmem_max=212992              # up the buffer size for all connections
-
 ```
 
 Now you should reboot your system or run the following command to reload the config
@@ -203,7 +203,8 @@ sudo systemctl status redis.service
 
 ## Creating the Cluster
 
-Once all nodes are running, we can create the cluster. Replace the IP addresses with your actual node IPs:
+Once all nodes are running, we can create the cluster.
+Replace the IP addresses with your actual node IPs:
 
 This command has to be run ONLY ONCE on one of the nodes.
 Replace the IP addresses with your actual node IPs.
@@ -224,24 +225,25 @@ This command will automatically assign replicas to masters and create the cluste
 Check the cluster status:
 
 ```bash
-redis-cli -c -p 7000 CLUSTER INFO
-redis-cli -c -p 7000 CLUSTER NODES
+redis-cli -c -h 192.168.1.10 -p 7000 CLUSTER INFO
+redis-cli -c -h 192.168.1.10 -p 7000 CLUSTER NODES
 ```
 
 Test the cluster with some basic commands:
 
 ```bash
-redis-cli -c -p 7000
-127.0.0.1:7000> SET user:1 "John"
+redis-cli -c -h 192.168.1.10 -p 7000
+192.168.1.10:7000> SET user:1 "John"
 -> Redirected to slot [5474] located at 192.168.1.11:7001
 OK
-127.0.0.1:7001> GET user:1
+192.168.1.11:7001> GET user:1
 "John"
 ```
 
 ## Conclusion
 
-You now have a production-ready Redis cluster with 3 master nodes and 3 replica nodes. This setup provides:
+You now have a production-ready Redis cluster with 3 master nodes and 3 replica nodes.
+This setup provides:
 - High availability through replication
 - Automatic failover
 - Data sharding across multiple nodes
