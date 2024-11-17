@@ -58,7 +58,7 @@ To transform this into a production-ready setup, I recommend implementing the fo
 
 ## The Setup
 
-Here's the Docker Compose file to get you :
+Here's the Docker Compose file you can use to do the complete setup:
 
 ```yaml:docker-compose.yml
 services:
