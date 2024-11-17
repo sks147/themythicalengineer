@@ -106,3 +106,8 @@ services:
 volumes:
   db-data:
 ```
+
+P.S. One of my friend is looking for a job in Product / Marketing & Operations Role.
+He has good background in data analytics, mathematics and finance.
+If you're looking out for a great candidate, please connect directly to candidate on Phone, Email or Linkedin.
+Please find the resume link [here](https://drive.google.com/file/d/1PCDza6rQQ3Ecp_a8gyYEmneNGeL-snTD/view?usp=sharing)
