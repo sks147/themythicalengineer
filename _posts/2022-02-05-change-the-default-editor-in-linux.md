@@ -5,7 +5,7 @@ date: 2022-02-05 09:43 +0530
 categories: devops
 author: themythicalengineer
 tags: development linux ubuntu server
-comments: true
+comments: false
 blogUid: a8087444-427b-4b5e-9734-264111fb3d84
 ---
 

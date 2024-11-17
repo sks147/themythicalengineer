@@ -5,7 +5,7 @@ date: 2020-07-21 06:47 +0530
 categories: skill
 author: themythicalengineer
 tags: agile collaboration communication scrum
-comments: true
+comments: false
 blogUid: "4cf52126-3752-430e-a62e-02c720bae641"
 ---
 Whole world is embracing Agile methodologies to improve quality, bring transparency and speed up the process. [Agile Manifesto](https://agilemanifesto.org/) emphasises the importance of self-organising teams. It focusses on teams that are cross-functional and include team members with all the capacities and competencies required to accomplish the project work.

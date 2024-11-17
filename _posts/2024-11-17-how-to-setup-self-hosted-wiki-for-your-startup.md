@@ -27,7 +27,7 @@ If you want better search capabilities, you can add Elasticsearch as well, but y
 - 8GB RAM
 - 2 vCPU
 
-In our case, we've grown to over 1,000 pages and nearly 400 users, and our setup is still going strong. The only maintenance I've had to do was adding Elasticsearch for improved search functionality.
+In our case, we've grown to over **1,000 pages** and nearly **400 users**, and our setup is still going strong. The only maintenance I've had to do was adding Elasticsearch for improved search functionality.
 
 ![elasticsearch_setup](/assets/images/setup-self-hosted-wiki/elasticsearch_setup.webp)
 
@@ -40,9 +40,9 @@ Let's talk numbers. Here's what you might pay running this on AWS EC2:
 | t4g.medium | 2 | 4 | $0.0224 | $16.35 | $0.0142 | $10.37 |
 | t4g.large | 2 | 8 | $0.0448 | $32.70 | $0.0283 | $20.66 |
 
-To put this in perspective: if you had 400 users on a typical paid wiki platform charging $5 per user, you'd be looking at a **$2,000+ monthly bill**.
+To put this in perspective: if you had **400** users on a typical paid wiki platform charging $5 per user, you'd be looking at a **$2,000+ monthly bill**.
 
-With a self-hosted solution, you will be paying less than $33/month even with the larger instance!
+With a self-hosted solution, you will be paying less than **$33/month** even with the larger instance!
 
 If you do need to scale up later, you can take small maintenance downtime to increase the instance size, or you can split the elasticsearch to a different instance.
 

@@ -5,7 +5,7 @@ date: 2021-04-21 22:21 +0530
 categories: development
 author: themythicalengineer
 tags: script productivity deepnote jupyter
-comments: true
+comments: false
 blogUid: "37f3ca5e-2b3d-4fd8-9c8a-cc71618a83f7"
 ---
 

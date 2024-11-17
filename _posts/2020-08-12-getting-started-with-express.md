@@ -5,7 +5,7 @@ date: 2020-08-12 19:27 +0530
 categories: development
 author: themythicalengineer
 tags: backend coding nodejs express
-comments: true
+comments: false
 blogUid: "79a1dd47-32ef-4d61-8aba-e16b30e11ccf"
 ---
 ![express_started](/assets/images/getting-started-with-express/express_started.jpg)

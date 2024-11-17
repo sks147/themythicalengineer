@@ -5,7 +5,7 @@ date: 2021-06-27 19:52 +0530
 categories: devops
 author: themythicalengineer
 tags: aws script backend scaling
-comments: true
+comments: false
 blogUid: "d1b0fb6f-087a-457a-a4c4-32ca785df303"
 ---
 

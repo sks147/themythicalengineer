@@ -5,7 +5,7 @@ date: 2020-07-18 08:20 +0530
 categories: tools
 author: themythicalengineer
 tags: productivity development macos
-comments: true
+comments: false
 blogUid: "1853e7e8-177f-459f-9cd3-62b704a48a0e"
 ---
 Are you tired of dragging windows around and resizing them everytime you open or close an app in your workspace?

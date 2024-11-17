@@ -5,7 +5,7 @@ date: 2022-02-18 09:37 +0530
 categories: development
 author: themythicalengineer
 tags: development docker aws devops linux
-comments: true
+comments: false
 blogUid: 03d59e7d-1372-40ba-af75-ffab28b44e00
 ---
 

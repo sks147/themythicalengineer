@@ -5,7 +5,7 @@ date: 2020-09-20 15:22 +0530
 categories: development
 author: themythicalengineer
 tags: mongodb nodejs backend scaling
-comments: true
+comments: false
 blogUid: "54e22e16-4fda-44f7-a074-6909c5733114"
 ---
 ![mongodb-expire-banner](/assets/images/mongodb-auto-expire-documents/mongodb-expire-banner.jpg)

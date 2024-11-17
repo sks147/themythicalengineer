@@ -5,7 +5,7 @@ date: 2020-07-31 19:30 +0530
 categories: development
 author: themythicalengineer
 tags: backend coding nodejs http
-comments: true
+comments: false
 blogUid: "bf661676-519b-4463-8736-4e35030a2fa0"
 ---
 The Internet, or the World Wide Web has taken over the world and changed our lifestyles. We are spending on average 6 - 8 hours online each day. Sites like Youtube, Wikipedia, Netflix etc. have evolved a lot and provide uniterrupted service 24x7 to the whole world. Software Engineers are working hard to create and maintain highly reliable systems like these. These engineers can be classified into two broad categories, Front-End & Back-End. 
