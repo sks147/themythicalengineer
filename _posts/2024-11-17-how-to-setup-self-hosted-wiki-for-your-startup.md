@@ -109,5 +109,5 @@ volumes:
 
 P.S. One of my friend is looking for a job in Product / Marketing & Operations / Data Analytics Role.
 He has good background in data analytics, mathematics and finance. He's currently located in Bangalore, India, open to relocate and work in-office setup.
-If you're looking out for a great candidate, please connect directly to candidate on Phone, Email or Linkedin.
+If you're looking out for a great candidate, please connect directly to candidate on Phone, [Email](sachin.23@dmsiitd.org) or [Linkedin](https://linkedin.com/in/sachiniit).
 Please find the resume link [here](https://drive.google.com/file/d/1PCDza6rQQ3Ecp_a8gyYEmneNGeL-snTD/view?usp=sharing)
