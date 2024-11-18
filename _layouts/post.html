@@ -16,6 +16,8 @@ comments: true
 <br/>
 {{ content }}
 <br>
+{% include job.html %}
+<br>
 {% if page.tags.size > 0 %}
   <span>
     {% for tag in page.tags %}
@@ -36,4 +38,4 @@ comments: true
   {% include comments.html %}
 {% endif %}
 
-{% include newsletter.html %}
+<!-- {% include newsletter.html %} -->
