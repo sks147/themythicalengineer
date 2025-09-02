@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "From Chaos to Control: Using Direnv to Manage Multiple GitHub Accounts"
+title: "Master Direnv: Guide to Managing Environment Variables Efficiently"
+description: "Discover how to use direnv to seamlessly switch between multiple GitHub accounts, automate git configuration, and eliminate manual setup. Step-by-step tutorial for developers."
 date: 2024-08-17 12:22 +0530
 categories: development
 author: themythicalengineer
-tags: development linux macos productivity terminal
+tags: direnv git github development linux macos productivity terminal automation ssh
 comments: false
 blogUid: b7d7918f-cadb-4541-95d0-ba4b9d84ddce
 ---
