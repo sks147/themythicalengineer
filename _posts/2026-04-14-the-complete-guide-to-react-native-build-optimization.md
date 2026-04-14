@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "The Complete Guide to React Native Build Optimization on macOS"
+title: "The Complete Guide to React Native Build Optimization"
 date: 2026-04-14 10:00 +0530
-categories: [React Native, Performance, Android, macOS]
+categories: [React Native, Performance, Android]
 author: themythicalengineer
-tags: react-native android build-performance gradle metro macos apple-silicon
+tags: react-native android build-performance gradle metro
 comments: false
 ---
 
-If you're building React Native apps on a Mac—especially one with Apple Silicon—you've probably noticed that release builds for Android take far longer than they should. Open Activity Monitor during a build and you'll likely see the surprising culprit: most build tools are utilizing only a single CPU core, leaving the rest of your powerful machine entirely idle.
+If you're building React Native apps on Linux or macOS, you've probably noticed that release builds for Android take far longer than they should. Open your system's activity monitor during a build and you'll likely see the surprising culprit: most build tools are utilizing only a single CPU core, leaving the rest of your powerful machine entirely idle.
 
 This guide walks you through each optimization step, explains why it works, and shows you how to verify the improvements.
+
+> **Note:** The optimizations in this guide have been tested on a MacBook Air M1 with 8GB RAM. Results may vary depending on your system specifications.
 
 ## Why Are Builds So Slow?
 
@@ -47,11 +49,11 @@ A fine-grained performance profile is available: use the --scan option.
 
 ## 1. Optimize Gradle for Parallel Execution
 
-Gradle is the Android build system. Out of the box, it runs tasks one after another and restricts memory to avoid destabilizing your system. On a modern Mac with 8+ cores, this is a massive waste.
+Gradle is the Android build system. Out of the box, it runs tasks one after another and restricts memory to avoid destabilizing your system. On a modern multi-core machine, this is a massive waste.
 
 ### The Fix
 
-**optimize-gradle.sh** - This script automatically detects your Mac's specifications and optimizes gradle.properties:
+**optimize-gradle.sh** - This script automatically detects your system's specifications and optimizes gradle.properties:
 
 ```bash
 #!/bin/bash
@@ -107,7 +109,7 @@ Or manually add these settings to `android/gradle.properties`:
 # Enable parallel task execution
 org.gradle.parallel=true
 
-# Use 75% of your CPU cores (6 on an 8-core Mac)
+# Use 75% of your CPU cores
 org.gradle.workers.max=6
 
 # Allocate more memory: 4GB heap + 1GB metaspace
@@ -148,7 +150,7 @@ A fine-grained performance profile is available: use the --scan option.
 
 ## 2. Speed Up Metro Bundler
 
-Metro compiles your JavaScript into a bundle for release builds. By default, it uses only 1 worker—regardless of how many cores your Mac has.
+Metro compiles your JavaScript into a bundle for release builds. By default, it uses only 1 worker—regardless of how many cores your system has.
 
 ### The Fix
 
@@ -187,7 +189,7 @@ A fine-grained performance profile is available: use the --scan option.
 
 > ~ 11 minutes -> ~ 5 minutes (Almost four times fast)
 
-**Why it works:** Instead of hardcoding a worker count, this automatically scales to your machine. On an 8-core Mac, Metro now uses 4 workers instead of 1—potentially 4x faster JS bundling.
+**Why it works:** Instead of hardcoding a worker count, this automatically scales to your machine. On an 8-core system, Metro now uses 4 workers instead of 1—potentially 4x faster JS bundling.
 
 ---
 
@@ -439,6 +441,6 @@ After first build, subsequent builds will be dramatically faster due to ccache h
 | ccache | 50%+ faster after first build |
 | Active architecture | 2-3x faster debug builds |
 
-Combine all four, and you can realistically expect release builds to go from 20+ minutes down to 2-5 minutes on a modern Mac and often faster on Apple Silicon.
+Combine all four, and you can realistically expect release builds to go from 20+ minutes down to 2-5 minutes on a modern multi-core system and often faster on Apple Silicon.
 
 Run your first optimized build and monitor the results. Your future self will thank you.
