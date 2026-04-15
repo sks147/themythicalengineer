@@ -18,11 +18,11 @@ This guide walks you through each optimization step, explains why it works, and 
 
 React Native's build stack consists of several components:
 
-- **Gradle** — builds your Android native code
-- **Metro** — bundles your JavaScript
-- **C++ Compiler** — handles TurboModules and Fabric (New Architecture)
+- **Gradle** - builds your Android native code
+- **Metro** - bundles your JavaScript
+- **C++ Compiler** - handles TurboModules and Fabric (New Architecture)
 
-By default, all three are configured conservatively. Gradle runs tasks sequentially, Metro uses minimal workers, and C++ files get recompiled fresh on every build—even if nothing changed. The good news: each of these is easily fixable.
+By default, all three are configured conservatively. Gradle runs tasks sequentially, Metro uses minimal workers, and C++ files get recompiled fresh on every build-even if nothing changed. The good news: each of these is easily fixable.
 
 ### Initial runtime duration without any optimization
 
@@ -150,7 +150,7 @@ A fine-grained performance profile is available: use the --scan option.
 
 ## 2. Speed Up Metro Bundler
 
-Metro compiles your JavaScript into a bundle for release builds. By default, it uses only 1 worker—regardless of how many cores your system has.
+Metro compiles your JavaScript into a bundle for release builds. By default, it uses only 1 worker, regardless of how many cores your system has.
 
 ### The Fix
 
@@ -189,14 +189,14 @@ A fine-grained performance profile is available: use the --scan option.
 
 > ~ 11 minutes -> ~ 5 minutes (Almost four times fast)
 
-**Why it works:** Instead of hardcoding a worker count, this automatically scales to your machine. On an 8-core system, Metro now uses 4 workers instead of 1—potentially 4x faster JS bundling.
+**Why it works:** Instead of hardcoding a worker count, this automatically scales to your machine. On an 8-core system, Metro now uses 4 workers instead of 1, potentially 4x faster JS bundling.
 
 ---
 
 
 ## 3. Cache C++ Compilations with ccache
 
-React Native's New Architecture relies heavily on C++ code (TurboModules, Fabric). These files are expensive to compile, and by default, they're rebuilt from scratch every single build—even if you only changed a single JavaScript file.
+React Native's New Architecture relies heavily on C++ code (TurboModules, Fabric). These files are expensive to compile, and by default, they're rebuilt from scratch every single build, even if you only changed a single JavaScript file.
 
 ### The Fix
 
@@ -299,11 +299,11 @@ BUILD SUCCESSFUL in 40s
 Configuration cache entry stored.
 ```
 
-Now builds are down to seconds 🎉.
+Now builds are down to seconds.
 
-> ~ 5 minutes -> < 1 minutes (Blazingly fast)
+> ~ 5 minutes -> < 1 minutes
 
-**Why it works:** Your second build only recompiles files that actually changed. Everything else loads from cache—in some cases, reducing build times by 50% or more.
+**Why it works:** Your second build only recompiles files that actually changed. Everything else loads from cache, in some cases, reducing build times by 50% or more.
 
 ---
 
