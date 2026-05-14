@@ -15,10 +15,6 @@ permalink: /:title.html
 
 # Build settings
 
-collections:
-  authors:
-    output: true
-
 minima:
   date_format: "%b %-d, %Y"
 
@@ -47,6 +43,7 @@ collections:
     output: true
 
 header_pages:
+  - apps/index.md
   - authors.md
 
 show_excerpts: false

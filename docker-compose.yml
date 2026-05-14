@@ -1,15 +1,16 @@
-version: '3.3'
 services:
   jekyll:
-    platform: linux/amd64
-    image: jekyll/jekyll:4.0
+    build: .
     container_name: jekyll
-    command: jekyll serve --force_polling --livereload
+    command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"
     ports:
       - 4000:4000
       - 35729:35729
     volumes:
-      - '$PWD:/srv/jekyll'
-      - '$PWD/vendor/bundle:/usr/local/bundle'
+      - '.:/srv/jekyll'
+      - bundle_cache:/usr/local/bundle
     environment:
       - JEKYLL_ENV=development
+
+volumes:
+  bundle_cache:
