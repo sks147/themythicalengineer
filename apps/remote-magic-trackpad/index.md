@@ -2,6 +2,7 @@
 layout: page
 title: Remote Magic Trackpad
 permalink: /apps/remote-magic-trackpad/
+no_ads: true
 ---
 
 Control your Mac's mouse and keyboard from your Android device.

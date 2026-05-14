@@ -2,7 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% unless page.no_ads %}
   <script data-ad-client="ca-pub-3449443543969384" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  {% endunless %}
   {%- seo -%}
   <meta name="keywords" content="software engineering, blog, software development, coding, productivity">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">

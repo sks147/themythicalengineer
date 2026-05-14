@@ -2,6 +2,7 @@
 layout: page
 title: Apps
 permalink: /apps/
+no_ads: true
 ---
 
 ## My Apps

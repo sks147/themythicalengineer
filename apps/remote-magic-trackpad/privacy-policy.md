@@ -3,7 +3,8 @@ layout: legal
 title: Privacy Policy
 permalink: /apps/remote-magic-trackpad/privacy-policy/
 app_name: Remote Magic Trackpad
-last_updated: 2026-05-14
+last_updated: 14th May 2026
+no_ads: true
 ---
 
 **Last Updated:** 14th May 2026

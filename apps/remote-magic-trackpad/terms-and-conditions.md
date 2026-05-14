@@ -4,6 +4,7 @@ title: Terms and Conditions
 permalink: /apps/remote-magic-trackpad/terms-and-conditions/
 app_name: Remote Magic Trackpad
 last_updated: 14th May 2026
+no_ads: true
 ---
 
 ## 1. Acceptance of Terms
