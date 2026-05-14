@@ -7,8 +7,6 @@ last_updated: 14th May 2026
 no_ads: true
 ---
 
-**Last Updated:** 14th May 2026
-
 ## 1. Introduction
 
 Welcome to **Remote Magic Trackpad**. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle information when you use our mobile application.
