@@ -59,6 +59,10 @@ Toggle **Three-Finger Drag** on in the app's **Gestures** settings. When enabled
 
 ![Enable Three-Finger Drag in app settings](/assets/images/remote-magic-trackpad/enable-3-finger-drag-android.webp)
 
+## Known Issues
+
+- The app may not work properly when another Bluetooth device (e.g., external speaker, headphones) is already connected to your Mac. If you experience connection issues, try disconnecting other Bluetooth devices and reconnecting the app.
+
 ## Legal
 
 - [Privacy Policy](/apps/remote-magic-trackpad/privacy-policy/)
