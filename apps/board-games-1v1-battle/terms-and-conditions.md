@@ -1,8 +1,8 @@
 ---
 layout: legal
 title: Terms and Conditions
-permalink: /apps/battle-with-friends/terms-and-conditions/
-app_name: "Battle with Friends: Mini Games"
+permalink: /apps/board-games-1v1-battle/terms-and-conditions/
+app_name: "Board Games 1v1 Battle"
 last_updated: 7th June 2026
 no_ads: true
 ---

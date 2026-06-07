@@ -1,8 +1,8 @@
 ---
 layout: legal
 title: Privacy Policy
-permalink: /apps/battle-with-friends/privacy-policy/
-app_name: "Battle with Friends: Mini Games"
+permalink: /apps/board-games-1v1-battle/privacy-policy/
+app_name: "Board Games 1v1 Battle"
 last_updated: 7th June 2026
 no_ads: true
 ---
