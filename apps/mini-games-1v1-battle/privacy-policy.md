@@ -1,15 +1,15 @@
 ---
 layout: legal
 title: Privacy Policy
-permalink: /apps/board-games-1v1-battle/privacy-policy/
-app_name: "Board Games 1v1 Battle"
+permalink: /apps/mini-games-1v1-battle/privacy-policy/
+app_name: "Mini Games 1v1 Battle"
 last_updated: 7th June 2026
 no_ads: true
 ---
 
 ## 1. Introduction
 
-Welcome to **Battle with Friends: Mini Games**. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle information when you use our mobile application.
+Welcome to **Mini Games 1v1 Battle**. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle information when you use our mobile application.
 
 ## 2. Data We Collect
 
@@ -17,7 +17,7 @@ Our app does not require a user login or account creation. We do not collect, st
 
 ### WiFi Direct Data
 
-Battle with Friends uses WiFi Direct to establish a peer-to-peer connection between two nearby devices for local multiplayer gameplay. During a game session, the following data is transmitted directly between the connected devices:
+Mini Games 1v1 Battle uses WiFi Direct to establish a peer-to-peer connection between two nearby devices for local multiplayer gameplay. During a game session, the following data is transmitted directly between the connected devices:
 
 - Player names (entered at the start of each session)
 - Game moves and actions

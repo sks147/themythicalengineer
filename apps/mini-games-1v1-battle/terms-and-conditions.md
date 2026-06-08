@@ -1,15 +1,15 @@
 ---
 layout: legal
 title: Terms and Conditions
-permalink: /apps/board-games-1v1-battle/terms-and-conditions/
-app_name: "Board Games 1v1 Battle"
+permalink: /apps/mini-games-1v1-battle/terms-and-conditions/
+app_name: "Mini Games 1v1 Battle"
 last_updated: 7th June 2026
 no_ads: true
 ---
 
 ## 1. Acceptance of Terms
 
-By downloading or using **Battle with Friends: Mini Games**, you agree to be bound by these Terms and Conditions. If you do not agree, please uninstall the application.
+By downloading or using **Mini Games 1v1 Battle**, you agree to be bound by these Terms and Conditions. If you do not agree, please uninstall the application.
 
 ## 2. Use of the App
 
