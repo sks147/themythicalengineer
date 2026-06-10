@@ -9,3 +9,4 @@ no_ads: true
 
 - [Remote Magic Trackpad](/apps/remote-magic-trackpad/) - Control your Mac's mouse and keyboard from your Android device.
 - [Mini Games 1v1 Battle](/apps/mini-games-1v1-battle/) - Play classic mini games with your friends over WiFi Direct.
+- [NursingQuiz](/apps/nursing-quiz/) - A secure, offline-first quiz app for nursing exam preparation.
