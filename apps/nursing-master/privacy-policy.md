@@ -1,15 +1,15 @@
 ---
 layout: legal
 title: Privacy Policy
-permalink: /apps/nursing-quiz/privacy-policy/
-app_name: "NursingQuiz"
+permalink: /apps/nursing-master/privacy-policy/
+app_name: "Nursing Master"
 last_updated: 10th June 2026
 no_ads: true
 ---
 
 ## 1. Introduction
 
-Welcome to **NursingQuiz**. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle information when you use our mobile application.
+Welcome to **Nursing Master**. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle information when you use our mobile application.
 
 ## 2. Data We Collect
 

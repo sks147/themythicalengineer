@@ -1,15 +1,15 @@
 ---
 layout: legal
 title: Terms and Conditions
-permalink: /apps/nursing-quiz/terms-and-conditions/
-app_name: "NursingQuiz"
+permalink: /apps/nursing-master/terms-and-conditions/
+app_name: "Nursing Master"
 last_updated: 10th June 2026
 no_ads: true
 ---
 
 ## 1. Acceptance of Terms
 
-By downloading or using **NursingQuiz**, you agree to be bound by these Terms and Conditions. If you do not agree, please uninstall the application.
+By downloading or using **Nursing Master**, you agree to be bound by these Terms and Conditions. If you do not agree, please uninstall the application.
 
 ## 2. Use of the App
 
