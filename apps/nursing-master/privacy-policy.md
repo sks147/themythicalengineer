@@ -19,8 +19,7 @@ Our app does not require a user login or account creation. We do not collect, st
 
 The app stores the following data locally on your device:
 
-- **Quiz data** is stored in a locally encrypted SQLite database using SQLCipher with AES-256 encryption. This includes quiz questions, your answers, scores, and progress. This data never leaves your device and is not transmitted to any server.
-- **User preferences** such as theme settings and app configuration are stored locally using AsyncStorage. This data never leaves your device.
+- **User preferences** such as theme settings and app configuration are stored locally. This data never leaves your device.
 
 No quiz history, scores, or user data is backed up to the cloud or sent to any server.
 
@@ -44,7 +43,6 @@ On iOS, the app does not track you across other companies' apps and websites (NS
 
 ## 4. Data Retention and Security
 
-- **Quiz data** is stored locally in an encrypted database (SQLCipher AES-256) and is never transmitted. It persists until you uninstall the app or clear app data.
 - **User preferences** are stored locally and persist until you uninstall the app or clear app data.
 - **Analytics data** is managed by Google's secure infrastructure and follows their retention policies.
 - **Ad-related data** is managed by Google's secure infrastructure and follows their retention policies.
