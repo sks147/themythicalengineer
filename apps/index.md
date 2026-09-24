@@ -12,3 +12,4 @@ no_ads: true
 - [Nursing Master](/apps/nursing-master/) - A secure, offline-first quiz app for nursing exam preparation.
 - [Disk Optimizer](/apps/disk-optimizer/) - Analyze and optimize your device storage.
 - [CalcTrack](/apps/calctrack/) - A notepad calculator with multi-currency support, unit conversions, date arithmetic, and countdown events.
+- [Photo EXIF Editor](/apps/photo-exif-editor/) - View, edit, strip, and copy EXIF metadata from your photos.
