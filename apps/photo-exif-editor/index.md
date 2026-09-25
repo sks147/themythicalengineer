@@ -7,29 +7,24 @@ no_ads: true
 
 ## Photo EXIF Editor
 
-Photo EXIF Editor is an Android app that lets you take full control of your photo metadata. View detailed EXIF information, edit individual tags, strip all metadata for privacy before sharing, or copy EXIF data from one photo to another. All photo processing happens entirely on your device — nothing is uploaded to any server.
+Photo EXIF Editor is an Android app that shows the hidden metadata in your photos and helps you remove it before you share. View detailed EXIF information with privacy-risk flags, strip metadata in one tap, or copy EXIF data from one photo to another. All photo processing happens entirely on your device — nothing is uploaded to any server.
 
 ### Features
 
 #### View EXIF Data
 
-- See all metadata stored in your photos including camera model, date, GPS coordinates, exposure settings, and more
-- Clean, organized display of EXIF tags
-
-#### Edit EXIF Data
-
-- Modify individual EXIF tags such as date, location, camera model, and more
-- Save edited photos to your gallery
+- See the metadata stored in your photos, including camera model, date, GPS coordinates, exposure settings, and more
+- Tags grouped by category, with privacy-risk flags for sensitive details like location and camera serial number
 
 #### Strip EXIF Data
 
-- Remove all metadata from photos for privacy before sharing online
-- Batch strip support
+- Remove metadata, including GPS location, from a photo in one tap before sharing online
+- The result is saved as a new photo, and your original stays untouched
 
 #### Copy EXIF Data
 
 - Transfer metadata from one photo to another
-- Useful for preserving original settings across edited versions
+- Useful for restoring details to edited versions of a photo
 
 ### Legal
 

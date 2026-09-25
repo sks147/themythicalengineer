@@ -3,7 +3,7 @@ layout: legal
 title: Terms and Conditions
 permalink: /apps/photo-exif-editor/terms-and-conditions/
 app_name: Photo EXIF Editor
-last_updated: 24th September 2026
+last_updated: 25th September 2026
 no_ads: true
 ---
 
@@ -15,20 +15,20 @@ By downloading or using **Photo EXIF Editor**, you agree to be bound by these Te
 
 - **License:** We grant you a personal, non-exclusive, non-transferable license to use this app for personal, non-commercial purposes.
 - **Restrictions:** You may not attempt to extract the source code, reverse-engineer, translate the app into other languages, or make derivative versions.
-- **Purpose:** The app is designed to view, edit, strip, and copy EXIF metadata from photos on your device. It is intended for personal use only.
+- **Purpose:** The app is designed to view, strip, and copy EXIF metadata of photos on your device. It is intended for personal use only.
 
 ## 3. EXIF Data Accuracy
 
-- EXIF metadata editing is provided for informational and personal use only and does not constitute professional advice.
+- EXIF metadata tools are provided for informational and personal use only and do not constitute professional advice.
 - While we strive for accuracy, we do not guarantee that all metadata operations are correct, complete, or error-free.
-- Stripping or editing EXIF data is irreversible on the output file. Always keep a backup of your original photos before modifying metadata.
+- Stripping or copying EXIF data is irreversible on the output file. Always keep a backup of your original photos before modifying metadata.
 - You should not rely solely on the app for decisions requiring precise metadata handling. Verify critical results independently.
 
 ## 4. Photo Processing
 
 - All photo processing happens entirely on your device. No photos or metadata are uploaded to any server.
 - The app accesses only the photos you explicitly select. It does not scan or access your full photo library.
-- Edited or stripped photos are saved as new files to your device gallery. Original files are not modified unless you explicitly overwrite them.
+- Stripped or copied photos are saved as new files in your device gallery. Original files are never modified.
 
 ## 5. Intellectual Property
 
@@ -41,7 +41,7 @@ All trademarks, copyrights, and other intellectual property rights related to th
 
 ## 7. Third-Party Services
 
-The app uses Google Analytics for Firebase to collect anonymous usage analytics and Firebase Crashlytics to collect crash reports for improving app stability. The app displays advertisements served by Google AdMob. We are not responsible for the content of these ads or the products and services they promote. Data collection by these services is governed by Google's privacy policies.
+The app uses Google Analytics for Firebase to collect usage analytics and Firebase Crashlytics to collect crash reports for improving app stability. The app displays advertisements served by Google AdMob. We are not responsible for the content of these ads or the products and services they promote. Data collection by these services is governed by Google's privacy policies.
 
 ## 8. Changes to These Terms
 
