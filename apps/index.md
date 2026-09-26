@@ -13,3 +13,4 @@ no_ads: true
 - [Disk Optimizer](/apps/disk-optimizer/) - Analyze and optimize your device storage.
 - [CalcTrack](/apps/calctrack/) - A notepad calculator with multi-currency support, unit conversions, date arithmetic, and countdown events.
 - [Photo EXIF Editor](/apps/photo-exif-editor/) - View, edit, strip, and copy EXIF metadata from your photos.
+- [DailyNews](/apps/dailynews/) - Read the day's news from trusted sources in one swipeable feed.
