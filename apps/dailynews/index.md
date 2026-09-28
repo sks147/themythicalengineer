@@ -26,9 +26,9 @@ DailyNews is an Android app that brings the day's news from trusted Indian and i
 - Choose a light or dark theme, or follow your phone's setting
 - Make the reading text smaller or larger
 
-### Contact
+### Contact Us
 
-Questions or feedback? Email themythicalengineer@gmail.com.
+Questions, feedback or a correction? Email [themythicalengineer@gmail.com](mailto:themythicalengineer@gmail.com), or see the [contact page](/apps/dailynews/contact/).
 
 ### Legal
 
